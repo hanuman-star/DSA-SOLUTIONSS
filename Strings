@@ -1,0 +1,177 @@
+
+### 1. Reverse a String
+
+**Problem:** Reverse a given string.
+
+```java
+class ReverseString {
+    public static void main(String[] args) {
+        String str = "hello";
+        String rev = "";
+
+        for (int i = str.length() - 1; i >= 0; i--) {
+            rev += str.charAt(i);
+        }
+        System.out.println("Reversed string: " + rev);
+    }
+}
+```
+
+---
+
+### 2. Check Palindrome String
+
+**Problem:** Check whether a string is a palindrome.
+
+```java
+class PalindromeString {
+    public static void main(String[] args) {
+        String str = "madam";
+        String rev = "";
+
+        for (int i = str.length() - 1; i >= 0; i--) {
+            rev += str.charAt(i);
+        }
+
+        if (str.equals(rev))
+            System.out.println("Palindrome");
+        else
+            System.out.println("Not Palindrome");
+    }
+}
+```
+
+---
+
+### 3. Count Vowels and Consonants
+
+**Problem:** Count vowels and consonants in a string.
+
+```java
+class CountVowelsConsonants {
+    public static void main(String[] args) {
+        String str = "programming";
+        int vowels = 0, consonants = 0;
+        str = str.toLowerCase();
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if (ch >= 'a' && ch <= 'z') {
+                if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+                    vowels++;
+                else
+                    consonants++;
+            }
+        }
+        System.out.println("Vowels: " + vowels);
+        System.out.println("Consonants: " + consonants);
+    }
+}
+```
+
+---
+
+### 4. Count Characters in a String
+
+**Problem:** Count total characters excluding spaces.
+
+```java
+class CountCharacters {
+    public static void main(String[] args) {
+        String str = "hello world";
+        int count = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) != ' ')
+                count++;
+        }
+        System.out.println("Character count: " + count);
+    }
+}
+```
+
+---
+
+### 5. Find Duplicate Characters in a String
+
+**Problem:** Print duplicate characters in a string.
+
+```java
+class DuplicateCharacters {
+    public static void main(String[] args) {
+        String str = "programming";
+        char[] arr = str.toCharArray();
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] == arr[j] && arr[i] != ' ') {
+                    System.out.println(arr[i]);
+                    break;
+                }
+            }
+        }
+    }
+}
+```
+
+---
+
+### 6. Check Anagram Strings
+
+**Problem:** Check if two strings are anagrams.
+
+```java
+import java.util.Arrays;
+
+class AnagramCheck {
+    public static void main(String[] args) {
+        String str1 = "listen";
+        String str2 = "silent";
+
+        char[] a = str1.toCharArray();
+        char[] b = str2.toCharArray();
+
+        Arrays.sort(a);
+        Arrays.sort(b);
+
+        if (Arrays.equals(a, b))
+            System.out.println("Anagram");
+        else
+            System.out.println("Not Anagram");
+    }
+}
+```
+
+---
+
+### 7. Find First Non-Repeated Character
+
+**Problem:** Find the first non-repeated character in a string.
+
+```java
+class FirstNonRepeatedChar {
+    public static void main(String[] args) {
+        String str = "swiss";
+
+        for (int i = 0; i < str.length(); i++) {
+            boolean unique = true;
+            for (int j = 0; j < str.length(); j++) {
+                if (i != j && str.charAt(i) == str.charAt(j)) {
+                    unique = false;
+                    break;
+                }
+            }
+            if (unique) {
+                System.out.println("First non-repeated character: " + str.charAt(i));
+                break;
+            }
+        }
+    }
+}
+```
+
+---
+
+✅ **Topic Covered:** Strings (Basics)
+
+Say **next** for Linked List, Stack, Queue, or Recursion.
