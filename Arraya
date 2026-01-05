@@ -1,0 +1,170 @@
+
+### 1. Find the Largest Element in an Array
+
+**Problem:** Given an array, find the maximum element.
+
+```java
+class LargestElement {
+    public static void main(String[] args) {
+        int[] arr = {3, 5, 1, 9, 2};
+        int max = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        System.out.println("Largest element: " + max);
+    }
+}
+```
+
+---
+
+### 2. Find the Smallest Element in an Array
+
+**Problem:** Given an array, find the minimum element.
+
+```java
+class SmallestElement {
+    public static void main(String[] args) {
+        int[] arr = {8, 4, 6, 2, 9};
+        int min = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        System.out.println("Smallest element: " + min);
+    }
+}
+```
+
+---
+
+### 3. Reverse an Array
+
+**Problem:** Reverse the given array.
+
+```java
+class ReverseArray {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        int left = 0, right = arr.length - 1;
+
+        while (left < right) {
+            int temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+            left++;
+            right--;
+        }
+
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+    }
+}
+```
+
+---
+
+### 4. Check if Array is Sorted
+
+**Problem:** Check whether the array is sorted in ascending order.
+
+```java
+class CheckSorted {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        boolean isSorted = true;
+
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < arr[i - 1]) {
+                isSorted = false;
+                break;
+            }
+        }
+        System.out.println("Is array sorted? " + isSorted);
+    }
+}
+```
+
+---
+
+### 5. Sum of All Elements in an Array
+
+**Problem:** Calculate the sum of elements in an array.
+
+```java
+class SumOfArray {
+    public static void main(String[] args) {
+        int[] arr = {2, 4, 6, 8};
+        int sum = 0;
+
+        for (int num : arr) {
+            sum += num;
+        }
+        System.out.println("Sum of array: " + sum);
+    }
+}
+```
+
+---
+
+### 6. Linear Search in an Array
+
+**Problem:** Search for a key element using linear search.
+
+```java
+class LinearSearch {
+    public static void main(String[] args) {
+        int[] arr = {5, 3, 7, 1, 9};
+        int key = 7;
+        int index = -1;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == key) {
+                index = i;
+                break;
+            }
+        }
+
+        if (index != -1)
+            System.out.println("Element found at index: " + index);
+        else
+            System.out.println("Element not found");
+    }
+}
+```
+
+---
+
+### 7. Count Even and Odd Numbers in an Array
+
+**Problem:** Count how many even and odd numbers are present.
+
+```java
+class EvenOddCount {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5, 6};
+        int even = 0, odd = 0;
+
+        for (int num : arr) {
+            if (num % 2 == 0)
+                even++;
+            else
+                odd++;
+        }
+        System.out.println("Even count: " + even);
+        System.out.println("Odd count: " + odd);
+    }
+}
+```
+
+---
+
+✅ **Topic Covered:** Arrays (Basics)
+
+When you are ready, ask for the **next topic** (example: Searching, Sorting, Strings, Linked List, Stack, Queue, Recursion).
